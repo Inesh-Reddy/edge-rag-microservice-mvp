@@ -1,0 +1,14 @@
+{
+  "name": "go-edge-indexer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "dev": "go run main.go",
+    "build": "go build -o ./bin/api ./main.go"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@repo/python-rag-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "poetry run python -m python_rag_core.main",
+    "build": "poetry build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

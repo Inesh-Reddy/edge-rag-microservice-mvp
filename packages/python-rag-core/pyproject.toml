@@ -1,0 +1,22 @@
+[project]
+name = "python-rag-core"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Inesh-Reddy",email = "ineshreddy007@gmail.com"}
+]
+readme = "README.md"
+requires-python = "^3.12"
+dependencies = [
+    "langchain (>=1.1.0,<2.0.0)",
+    "sentence-transformers (>=5.1.2,<6.0.0)",
+    "qdrant-client (>=1.16.1,<2.0.0)",
+    "openai (>=2.8.1,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "python_rag_core", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
