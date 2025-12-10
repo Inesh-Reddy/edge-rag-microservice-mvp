@@ -24,7 +24,7 @@ def collection_exists(client: QdrantClient, collection_name: Optional[str] = Non
     """
     name = collection_name or QDRANT_COLLECTION_NAME
     try:
-        return client.has_collection(name)
+        return client.collection_exists(collection_name=name)
     # except QdrantError:
     #     return False
     except Exception as e:
