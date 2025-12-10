@@ -1,18 +1,27 @@
-def run_rag_service():
-    print("🚀 Starting RAG core service...")
+from fastapi import FastAPI
+from utils.qdrant_utils import get_client, collection_exists
 
-    # Load embedding model
-    print("📥 Loading embedding model...")
+app = FastAPI()
 
-    # Initialize Qdrant (in memory mode for dev)
-    print("🧠 Initializing Qdrant (in-memory)...")
+@app.get("/qdrant/health")
+def qdrant_health():
+    client = get_client()
+    try:
+        exists = collection_exists(client)
+        return {
+            "status": "connected",
+            "collection_exists": exists
+        }
+    except Exception as e:
+        return{
+            "status": "error",
+            "message": str(e)
+        }
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"} 
 
-    # Sample document
-    sample_text = "LangChain makes building LLM apps easier"
-    print(f"📄 Embedding sample doc: '{sample_text}'")
-
-
-# Allow running directly when executing this file
-if __name__ == "__main__":
-    run_rag_service()
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str = "100"):
+    return {"item_id": item_id, "q": q}

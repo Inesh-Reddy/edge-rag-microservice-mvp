@@ -1,14 +1,8 @@
 {
   "name": "@repo/python-rag-core",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "dev": "poetry run python -m python_rag_core.main",
-    "build": "poetry build"
+    "dev": "poetry run uvicorn python_rag_core.main:app --reload --host 127.0.0.1 --port 8000"
   },
   "keywords": [],
   "author": "",
