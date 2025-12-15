@@ -1,0 +1,86 @@
+# =========================
+# Python bytecode / cache
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+ENV/
+env/
+
+# =========================
+# Poetry
+# =========================
+.poetry/
+poetry.lock.tmp
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+*.out
+
+# =========================
+# HuggingFace / Model cache
+# =========================
+.cache/
+.huggingface/
+hf_cache/
+models/
+
+# =========================
+# Qdrant local data
+# =========================
+qdrant_storage/
+qdrant_data/
+
+# =========================
+# FastAPI / Uvicorn
+# =========================
+uvicorn.log
+
+# =========================
+# Jupyter / notebooks
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# OS / Editor noise
+# =========================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# =========================
+# Test / coverage
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Build / dist
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.swp

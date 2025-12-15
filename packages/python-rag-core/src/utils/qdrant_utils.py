@@ -1,7 +1,10 @@
 import os
+from dotenv import load_dotenv
 from typing import Any, Optional
 from qdrant_client import QdrantClient, models
 
+
+load_dotenv()
 QDRANT_HOST = os.getenv("QDRANT_HOST", "localhost")
 QDRANT_PORT = int(os.getenv("QDRANT_PORT", 6333))
 QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME", "edge_rag") 
